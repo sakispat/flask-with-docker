@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  website:
+    build:
+      context: ./
+    container_name: website_app
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 5000:5000
+    networks:
+      - app_network
+
+networks:
+  app_network:
